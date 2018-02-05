@@ -1,0 +1,18 @@
+{% extends "basicapp/basicapp_base.html" %}
+
+{% block body_block %}
+
+<div class="jumbotron">
+  <h1> Welcome to the school Detail Page</h1>
+  <h2> School Detail:</h2>
+  <p>Name: {{school.name}}</p>
+  <p>Principal : {{school.principal}}</p>
+  <p>Location : {{school.location}}</p>
+
+  <h3>Students list: </h3>
+  {% for student in school.students.all %}
+  <p>{{student.name}} who is {{student.age}} years old. </p>
+ {% endfor %}
+</div>
+
+{% endblock %}
